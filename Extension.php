@@ -12,14 +12,14 @@ use Bolt\Translation\Translator as Trans;
 
 class Extension extends BaseExtension
 {
-	// These store some session info for middleware "after" callback:
-	private $contact_success = NULL;
-	private $contact_invalid_form = NULL;
+    // These store some session info for middleware "after" callback:
+    private $contact_success = NULL;
+    private $contact_invalid_form = NULL;
 
     // Whether to inject the contact form into the page or not
-	private $active = false;
+    public $active = false;
 
-	/**
+    /**
      * Bolt extension initialize
      */
     public function initialize() {
@@ -159,7 +159,8 @@ class Extension extends BaseExtension
 
 	        $to = $this->config['to'];
 	        if(!$to) {
-	        	$to = array($this->app['users']->getUser(1)['email']);
+	        	$user = $this->app['users']->getUser(1);
+	            $to = array($user['email']);
 	    	}
 	        $subject = sprintf("[%s] Contact Form Submission.", $this->app['config']->get('general/sitename'));
 
