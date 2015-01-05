@@ -9,7 +9,7 @@ This is a very simple contact form for the Bolt CMS - [link](https://bolt.cm/)
 2. Install the extension "salidasoftware/boltcontact"
 3. Add the text "[contact]" anywhere you'd like the contact form to appear.
 
-By default, messages are sent to the first admin user's email address.  You can customize this by seting a "to" array in the contact.salidasoftware.yml file (found in the extensions folder).  For example
+By default, messages are sent to the first admin user's email address.  You can customize this by seting a "to" array in the boltcontact.salidasoftware.yml file (found in the extensions folder).  For example
 
     to: ["sponge@bob.sqarepants", "patrick@st.ar"]
 
