@@ -1,0 +1,4 @@
+/* Last name is the honeypot field */
+form.contact .last_name {
+	display: none;
+}

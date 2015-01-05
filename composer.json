@@ -1,0 +1,27 @@
+{
+    "name": "salidasoftware/boltcontact",
+    "description": "Simple contact form for Bolt CMS.",
+    "type": "bolt-extension",
+    "require": {
+        "bolt/bolt": ">=2.0.0,<3.0.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aaron Blondeau", 
+            "email": "aaron@salidasoftware.com"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "init.php"
+        ],
+        "psr-4": {
+            "Bolt\\Extension\\SalidaSoftware\\BoltContact\\": ""
+        }
+    },
+    
+    "extra": {
+        "bolt-assets": "assets"
+    }
+}

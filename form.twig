@@ -1,0 +1,38 @@
+{% if invalid_form %}
+	{{ invalid_form|raw }}
+{% elseif success %}
+	<div class="alert alert-success">
+		{{ success }}
+	</div>
+{% else %}
+	<form action="{{ action }}" method="post" class="contact">
+		<div class='name'>
+		    {{ form_label(form.name) }}
+		    {{ form_errors(form.name) }}
+		    {{ form_widget(form.name) }}
+		</div>
+
+		<div class='email'>
+		    {{ form_label(form.email) }}
+		    {{ form_errors(form.email) }}
+		    {{ form_widget(form.email) }}
+		</div>
+
+		{# honeypot #}
+	    <div class='last_name'>
+		    {{ form_label(form.last_name) }}
+		    {{ form_errors(form.last_name) }}
+		    {{ form_widget(form.last_name) }}
+		</div>
+
+		<div class='message'>
+		    {{ form_label(form.message) }}
+		    {{ form_errors(form.message) }}
+		    {{ form_widget(form.message) }}
+		</div>
+
+		{{ form_row(form._token) }}
+
+	    <input type="submit" name="submit" />
+	</form>
+{% endif %}
