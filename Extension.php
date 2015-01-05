@@ -105,7 +105,7 @@ class Extension extends BaseExtension
      * @return Symfony\Component\Form\FormBuilder
      */
     public function buildForm() {
-    	$form = $this->app['form.factory']->createBuilder('form', [])
+    	$form = $this->app['form.factory']->createBuilder('form', array())
 	        ->add('name', 'text', array(
         		'constraints' => array(new Assert\NotBlank())
    			))
